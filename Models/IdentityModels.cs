@@ -20,6 +20,11 @@ namespace TrashCollection.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        // add dbset employee
+        // add dbset customer 
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
