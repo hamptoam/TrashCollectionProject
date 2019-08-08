@@ -191,8 +191,18 @@
     <Compile Include="Migrations\201908081402526_AccountViewModelErrorFix.Designer.cs">
       <DependentUpon>201908081402526_AccountViewModelErrorFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908081910020_CheckingForUsers.cs" />
+    <Compile Include="Migrations\201908081910020_CheckingForUsers.Designer.cs">
+      <DependentUpon>201908081910020_CheckingForUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908081948156_AddedEmployeeandCustomerKeys.cs" />
+    <Compile Include="Migrations\201908081948156_AddedEmployeeandCustomerKeys.Designer.cs">
+      <DependentUpon>201908081948156_AddedEmployeeandCustomerKeys.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -287,6 +297,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908081402526_AccountViewModelErrorFix.resx">
       <DependentUpon>201908081402526_AccountViewModelErrorFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908081910020_CheckingForUsers.resx">
+      <DependentUpon>201908081910020_CheckingForUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908081948156_AddedEmployeeandCustomerKeys.resx">
+      <DependentUpon>201908081948156_AddedEmployeeandCustomerKeys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

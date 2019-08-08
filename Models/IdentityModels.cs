@@ -22,6 +22,8 @@ namespace TrashCollection.Models
     {
 
         // add dbset employee
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
         // add dbset customer 
 
 

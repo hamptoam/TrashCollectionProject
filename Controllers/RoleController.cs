@@ -51,7 +51,7 @@ namespace TrashCollection.Controllers
 
             ApplicationDbContext context = new ApplicationDbContext();
             var Roles = context.Roles.ToList();
-            return View();
+            return View(Roles);
         }
     }
 }
