@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace TrashCollection.Controllers
 {
-    public class CustomerltController : Controller
+    public class CustomerController : Controller
     {
         // GET: Customerlt
         public ActionResult Index()
