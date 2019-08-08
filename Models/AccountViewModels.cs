@@ -30,7 +30,7 @@ namespace TrashCollection.Models
 
         [Required]
         [Display(Name = "Code")]
-        public string Code { get; set; }
+        public string Code { get; set; } 
         public string ReturnUrl { get; set; }
 
         [Display(Name = "Remember this browser?")]
@@ -49,9 +49,9 @@ namespace TrashCollection.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "UserName")]
         [EmailAddress]
-        public string Email { get; set; }
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -67,7 +67,6 @@ namespace TrashCollection.Models
         [Required]
         [Display(Name = "UserRoles")]
         public string UserRoles { get; set; }
-
 
         [Required]
         [EmailAddress]

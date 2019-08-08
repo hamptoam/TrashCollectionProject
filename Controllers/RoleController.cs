@@ -8,9 +8,8 @@ using TrashCollection.Models;
 
 namespace TrashCollection.Controllers
 {
-    public class RoleController : Controller
+    public class RoleController : UserController
     {
-        ApplicationDbContext context;
 
         public RoleController()
         {
@@ -32,6 +31,23 @@ namespace TrashCollection.Controllers
         }
         public ActionResult Index()
         {
+            UserController usercontroller = new UserController();
+
+            if (User.Identity.IsAuthenticated)
+            {
+
+                if (!isAdminUser())
+                {
+                    return RedirectToAction("Index, Home");
+                }
+
+            }
+            else
+            {
+                return RedirectToAction("Index, Home");
+            }
+
+            var Roles = context.Roles.ToList();
             return View();
         }
     }
