@@ -33,7 +33,7 @@ namespace TrashCollection.Controllers
         {
             UserController usercontroller = new UserController();
 
-            if (User.Identity.IsAuthenticated)
+          /*  if (User.Identity.IsAuthenticated)
             {
 
                 if (!isAdminUser())
@@ -47,6 +47,9 @@ namespace TrashCollection.Controllers
                 return RedirectToAction("Index, Home");
             }
 
+            */
+
+            ApplicationDbContext context = new ApplicationDbContext();
             var Roles = context.Roles.ToList();
             return View();
         }

@@ -256,7 +256,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Role\Index.cshtml" />
-    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Role\AddRole.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
