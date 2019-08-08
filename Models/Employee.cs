@@ -6,8 +6,6 @@ using System.Web;
 
 namespace TrashCollection.Models
 {
-  
-
     public class Employee
     {
         [Key]
@@ -15,6 +13,10 @@ namespace TrashCollection.Models
         public string LastName { get; set; }
 
         public string Address { get; set; }
+
+        public string Email { get; set; }
+
+        public List<string> PickupList { get; set; }
 
         public AddPhoneNumberViewModel PhoneNumber { get; set; }
 
