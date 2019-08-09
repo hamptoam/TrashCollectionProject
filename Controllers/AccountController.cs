@@ -181,13 +181,32 @@ namespace TrashCollection.Controllers
 
                     await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
                     //ends here
+                    if (User.IsInRole("Customer"))
+                    {
+
+                        ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Customer"))
+                                                                .ToList(), "FirstName", "LastName");
+                        return RedirectToAction("Index", "");
+
+
+                    }
+                    else if (User.IsInRole("Employee"))
+                    {
+                        ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Employee"))
+                                                                .ToList(), "FirstName", "LastName");
+                        return RedirectToAction("Index", "");
+                    }
+               
+
+                   
+
                     return RedirectToAction("Index", "Users");
                 }
 
-                ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
-                                                        .ToList(), "Name", "Name");
+               // ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
+               //                                         .ToList(), "Name", "Name");
 
-                AddErrors(result);
+                AddErrors(result); 
             }
 
             // If we got this far, something failed, redisplay form

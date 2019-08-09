@@ -11,6 +11,10 @@
 </p>
 <table class="table">
     <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.LastName)
         </th>
@@ -18,28 +22,41 @@
             @Html.DisplayNameFor(model => model.Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Address)
+            @Html.DisplayNameFor(model => model.pickUpAddress)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.billingAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dayOfWeek)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FirstName }) |
-            @Html.ActionLink("Details", "Details", new { id=item.FirstName }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.FirstName })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.pickUpAddress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.billingAddress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.dayOfWeek)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.FirstName, item.LastName, item.Email, item.pickUpAddress, item.billingAddress, item.dayOfWeek }) |
+        @Html.ActionLink("Details", "Details",  new { id = item.FirstName, item.LastName, item.Email, item.pickUpAddress, item.billingAddress, item.dayOfWeek })
+        @Html.ActionLink("Delete", "Delete",  new { id = item.FirstName, item.LastName, item.Email, item.pickUpAddress, item.billingAddress, item.dayOfWeek })
+</tr>
 }
 
 </table>
