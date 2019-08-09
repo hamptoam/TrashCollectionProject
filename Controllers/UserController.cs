@@ -15,6 +15,9 @@ namespace TrashCollection.Controllers
         public ApplicationUserManager UserManager;
 
 
+        
+
+
         public UserController()
         {
 

@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201908081948156_AddedEmployeeandCustomerKeys.Designer.cs">
       <DependentUpon>201908081948156_AddedEmployeeandCustomerKeys.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908091304576_EmployeesandCustomers.cs" />
+    <Compile Include="Migrations\201908091304576_EmployeesandCustomers.Designer.cs">
+      <DependentUpon>201908091304576_EmployeesandCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -317,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908081948156_AddedEmployeeandCustomerKeys.resx">
       <DependentUpon>201908081948156_AddedEmployeeandCustomerKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908091304576_EmployeesandCustomers.resx">
+      <DependentUpon>201908091304576_EmployeesandCustomers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
