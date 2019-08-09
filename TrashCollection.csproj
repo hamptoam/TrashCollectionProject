@@ -205,6 +205,14 @@
     <Compile Include="Migrations\201908091304576_EmployeesandCustomers.Designer.cs">
       <DependentUpon>201908091304576_EmployeesandCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908091359276_FixedRegisterViewModelError.cs" />
+    <Compile Include="Migrations\201908091359276_FixedRegisterViewModelError.Designer.cs">
+      <DependentUpon>201908091359276_FixedRegisterViewModelError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908091435155_ImprovedCustomerModel.cs" />
+    <Compile Include="Migrations\201908091435155_ImprovedCustomerModel.Designer.cs">
+      <DependentUpon>201908091435155_ImprovedCustomerModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -324,6 +332,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908091304576_EmployeesandCustomers.resx">
       <DependentUpon>201908091304576_EmployeesandCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908091359276_FixedRegisterViewModelError.resx">
+      <DependentUpon>201908091359276_FixedRegisterViewModelError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908091435155_ImprovedCustomerModel.resx">
+      <DependentUpon>201908091435155_ImprovedCustomerModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
