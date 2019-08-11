@@ -21,9 +21,12 @@ namespace TrashCollection.Controllers
         }
 
         // GET: Customers/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
+            var customer = db.Customers.Include(db => db.).SingleOrDefault(db = user.Id == id);
+
+            return View(customer);
+            /* if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -33,9 +36,12 @@ namespace TrashCollection.Controllers
                 return HttpNotFound();
             }
             return View(customer);
-        }
+                  }
+                */
 
-        // GET: Customers/Create
+        }
+            
+            // GET: Customers/Create
         public ActionResult Create()
         {
             return View();
@@ -45,26 +51,30 @@ namespace TrashCollection.Controllers
       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FirstName,LastName,Email,Address")] Customer customer)
+        public ActionResult Create([Bind(Include = "FirstName,LastName,Email, pickUpAddress, billingAddress, dayOfWeek")] Customer customer)
         {
             if (ModelState.IsValid)
             {
                 db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
             }
 
             return View(customer);
         }
 
         // GET: Customers/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
+
+            Customer customer = db.Customers.SingleOrDefault(db => db.Id == id);
+            customer. = db.Users.ToList();
+            if (customer == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
+         
             if (customer == null)
             {
                 return HttpNotFound();
@@ -76,7 +86,7 @@ namespace TrashCollection.Controllers
        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FirstName,LastName,Email,Address")] Customer customer)
+        public ActionResult Edit([Bind(Include = "FirstName,LastName,Email, pickUpAdress, billingAddress, dayOfWeek")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -120,6 +130,13 @@ namespace TrashCollection.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public void setDayOfWeek()
+        {
+
+
+
         }
     }
 }

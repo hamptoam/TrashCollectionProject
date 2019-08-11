@@ -18,9 +18,12 @@ namespace TrashCollection.Models
 
         public List<string> PickupList { get; set; }
 
-        public AddPhoneNumberViewModel PhoneNumber { get; set; }
+        public string phoneNumber { get; set; }
 
         //did this and customer key for migration purposes, continue working on these classes 
 
     }
+
+
+
 }

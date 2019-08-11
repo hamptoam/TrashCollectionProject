@@ -186,7 +186,7 @@ namespace TrashCollection.Controllers
 
                         ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Customer"))
                                                                 .ToList(), "FirstName", "LastName");
-                        return RedirectToAction("Index", "");
+                        return RedirectToAction("Index", "CustomerIndex");
 
 
                     }
@@ -194,7 +194,7 @@ namespace TrashCollection.Controllers
                     {
                         ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Employee"))
                                                                 .ToList(), "FirstName", "LastName");
-                        return RedirectToAction("Index", "");
+                        return RedirectToAction("Index", "EmployeeIndex");
                     }
                
 
