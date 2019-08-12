@@ -22,9 +22,11 @@ namespace TrashCollection.Controllers
         }
 
         // GET: Customers/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            var customer = db.Customers.Where(m => m.Id == id).SingleOrDefault();
+            string userId = User.Identity.GetUserId();
+
+            var customer = db.Customers.Where(m => m.ApplicationId == userId).SingleOrDefault();
 
             return View(customer);
             /* if (id == null)
@@ -88,7 +90,7 @@ namespace TrashCollection.Controllers
        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FirstName,LastName,Email, pickUpAdress, billingAddress, dayOfWeek")] Customer customer)
+        public ActionResult Edit([Bind(Include = "FirstName,LastName,Email, pickUpAdress, billingAddress, balance, dayOfWeek, oneTimePickUpDate")] Customer customer)
         {
             if (ModelState.IsValid)
             {

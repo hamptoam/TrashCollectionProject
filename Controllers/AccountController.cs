@@ -168,7 +168,7 @@ namespace TrashCollection.Controllers
 
                     await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
                     //ends here
-                    if (User.IsInRole("Customer"))
+                    if (model.UserRoles == "Customer")
                     {
 
 
@@ -178,14 +178,14 @@ namespace TrashCollection.Controllers
 
 
                     }
-                    else if (User.IsInRole("Employee"))
+                    else if (model.UserRoles == "Employee")
                     {
                         ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Employee"))
                                                                 .ToList(), "FirstName", "LastName");
                         return RedirectToAction("Create", "Employees");
                     }
                
-                    return RedirectToAction("Create", "Users");
+                    return RedirectToAction("Create", "Employees");
                 }
 
 

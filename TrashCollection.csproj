@@ -172,8 +172,6 @@
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\RoleController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -236,6 +234,10 @@
     <Compile Include="Migrations\201908121658095_AddedBalanceInformation.cs" />
     <Compile Include="Migrations\201908121658095_AddedBalanceInformation.Designer.cs">
       <DependentUpon>201908121658095_AddedBalanceInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908121820230_JustInCase.cs" />
+    <Compile Include="Migrations\201908121820230_JustInCase.Designer.cs">
+      <DependentUpon>201908121820230_JustInCase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -310,12 +312,12 @@
     <Content Include="Views\Customers\Delete.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
-    <Content Include="Views\Customers\CustomerIndex.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Employees\Create.cshtml" />
     <Content Include="Views\Employees\Delete.cshtml" />
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
-    <Content Include="Views\Employees\EmployeeIndex.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -380,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908121658095_AddedBalanceInformation.resx">
       <DependentUpon>201908121658095_AddedBalanceInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908121820230_JustInCase.resx">
+      <DependentUpon>201908121820230_JustInCase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
