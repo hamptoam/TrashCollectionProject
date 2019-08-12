@@ -69,10 +69,11 @@ namespace TrashCollection.Controllers
         }
 
         // GET: Customers/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
+            string userId = User.Identity.GetUserId();
 
-            Customer customer = db.Customers.Where(m => m.Id == id).SingleOrDefault();
+            Customer customer = db.Customers.Where(m => m.ApplicationId == userId).SingleOrDefault();
            
             if (customer == null)
             {
