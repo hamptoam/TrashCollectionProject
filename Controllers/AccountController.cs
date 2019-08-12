@@ -163,14 +163,6 @@ namespace TrashCollection.Controllers
                 if (result.Succeeded)
                 {
 
-
-
-                    // add user to role 
-
-                    // figure out how to add to multiple roles
-
-
-
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
@@ -186,7 +178,7 @@ namespace TrashCollection.Controllers
 
                         ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Customer"))
                                                                 .ToList(), "FirstName", "LastName");
-                        return RedirectToAction("Index", "CustomerIndex");
+                        return RedirectToAction("Create", "Customers");
 
 
                     }
@@ -194,22 +186,15 @@ namespace TrashCollection.Controllers
                     {
                         ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Employee"))
                                                                 .ToList(), "FirstName", "LastName");
-                        return RedirectToAction("Index", "EmployeeIndex");
+                        return RedirectToAction("Create", "Employees");
                     }
                
-
-                   
-
-                    return RedirectToAction("Index", "Users");
+                    return RedirectToAction("Create", "Users");
                 }
 
-               // ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
-               //                                         .ToList(), "Name", "Name");
 
                 AddErrors(result); 
             }
-
-            // If we got this far, something failed, redisplay form
             return View(model);
         }
 
@@ -250,15 +235,10 @@ namespace TrashCollection.Controllers
                     return View("ForgotPasswordConfirmation");
                 }
 
-                // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
-                // Send an email with this link
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
+             
             }
 
-            // If we got this far, something failed, redisplay form
+          
             return View(model);
         }
 

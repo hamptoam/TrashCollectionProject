@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -23,7 +24,7 @@ namespace TrashCollection.Controllers
         // GET: Customers/Details/5
         public ActionResult Details(int id)
         {
-            var customer = db.Customers.Include(db => db.).SingleOrDefault(db = user.Id == id);
+            var customer = db.Customers.Where(m => m.Id == id).SingleOrDefault();
 
             return View(customer);
             /* if (id == null)
@@ -36,10 +37,12 @@ namespace TrashCollection.Controllers
                 return HttpNotFound();
             }
             return View(customer);
-                  }
-                */
-
-        }
+              }
+        
+            */
+            }
+        
+            
             
             // GET: Customers/Create
         public ActionResult Create()
@@ -55,6 +58,8 @@ namespace TrashCollection.Controllers
         {
             if (ModelState.IsValid)
             {
+                var userId = User.Identity.GetUserId();
+                customer.ApplicationId = userId;
                 db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -68,8 +73,8 @@ namespace TrashCollection.Controllers
         public ActionResult Edit(int id)
         {
 
-            Customer customer = db.Customers.SingleOrDefault(db => db.Id == id);
-            customer. = db.Users.ToList();
+            Customer customer = db.Customers.Where(m => m.Id == id).SingleOrDefault();
+           
             if (customer == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

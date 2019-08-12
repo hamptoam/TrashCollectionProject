@@ -213,6 +213,14 @@
     <Compile Include="Migrations\201908091435155_ImprovedCustomerModel.Designer.cs">
       <DependentUpon>201908091435155_ImprovedCustomerModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908121332428_AddedForeignKeys.cs" />
+    <Compile Include="Migrations\201908121332428_AddedForeignKeys.Designer.cs">
+      <DependentUpon>201908121332428_AddedForeignKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908121410351_FixedErrors.cs" />
+    <Compile Include="Migrations\201908121410351_FixedErrors.Designer.cs">
+      <DependentUpon>201908121410351_FixedErrors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -338,6 +346,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908091435155_ImprovedCustomerModel.resx">
       <DependentUpon>201908091435155_ImprovedCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908121332428_AddedForeignKeys.resx">
+      <DependentUpon>201908121332428_AddedForeignKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908121410351_FixedErrors.resx">
+      <DependentUpon>201908121410351_FixedErrors.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
