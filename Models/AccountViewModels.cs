@@ -49,7 +49,7 @@ namespace TrashCollection.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "UserName")]
+        [Display(Name = "UserName (email)")]
         [EmailAddress]
         public string UserName { get; set; }
 
@@ -65,7 +65,7 @@ namespace TrashCollection.Models
     public class RegisterViewModel
     {
         [Required]
-        [Display(Name = "UserRoles")]
+        [Display(Name = "User Type")]
         public string UserRoles { get; set; }
 
         [Required]
@@ -81,9 +81,10 @@ namespace TrashCollection.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
         
-        [Required]
+        /*  [Required]
         [Display(Name = "UserName")]
         public string UserName { get; set; }
+        */
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

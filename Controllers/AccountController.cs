@@ -18,16 +18,17 @@ namespace TrashCollection.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
         ApplicationDbContext context;
-
+        
         public AccountController()
         {
-           context = new ApplicationDbContext();
+            context = new ApplicationDbContext();
         }
-
+        
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
             SignInManager = signInManager;
+       
         }
 
         public ApplicationSignInManager SignInManager

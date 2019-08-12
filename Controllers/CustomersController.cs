@@ -40,10 +40,7 @@ namespace TrashCollection.Controllers
               }
         
             */
-            }
-        
-            
-            
+            }    
             // GET: Customers/Create
         public ActionResult Create()
         {

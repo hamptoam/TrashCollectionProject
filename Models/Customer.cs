@@ -35,6 +35,9 @@ namespace TrashCollection.Models
         [Display(Name = "Phone Number")]
         public string phoneNumber { get; set; }
 
+        [Display(Name = "Monthly Balance")]
+        public string balance { get; set; }
+
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }

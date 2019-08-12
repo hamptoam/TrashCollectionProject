@@ -53,9 +53,9 @@
         @Html.DisplayFor(modelItem => item.dayOfWeek)
     </td>
     <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.FirstName, item.LastName, item.Email, item.pickUpAddress, item.billingAddress, item.dayOfWeek }) 
-        @Html.ActionLink("Details", "Details",  new { id = item.FirstName, item.LastName, item.Email, item.pickUpAddress, item.billingAddress, item.dayOfWeek })
-        @Html.ActionLink("Delete", "Delete",  new { id = item.FirstName, item.LastName, item.Email, item.pickUpAddress, item.billingAddress, item.dayOfWeek })
+        @Html.ActionLink("Edit", "Edit", new { id = item.FirstName}) 
+        @Html.ActionLink("Details", "Details",  new { id = item.FirstName})
+        @Html.ActionLink("Delete", "Delete",  new { id = item.FirstName})
 </tr>
 }
 

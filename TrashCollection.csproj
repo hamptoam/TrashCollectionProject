@@ -221,6 +221,14 @@
     <Compile Include="Migrations\201908121410351_FixedErrors.Designer.cs">
       <DependentUpon>201908121410351_FixedErrors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908121429306_AddedCustomerBalance.cs" />
+    <Compile Include="Migrations\201908121429306_AddedCustomerBalance.Designer.cs">
+      <DependentUpon>201908121429306_AddedCustomerBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908121501162_MoreErrors.cs" />
+    <Compile Include="Migrations\201908121501162_MoreErrors.Designer.cs">
+      <DependentUpon>201908121501162_MoreErrors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -352,6 +360,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908121410351_FixedErrors.resx">
       <DependentUpon>201908121410351_FixedErrors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908121429306_AddedCustomerBalance.resx">
+      <DependentUpon>201908121429306_AddedCustomerBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908121501162_MoreErrors.resx">
+      <DependentUpon>201908121501162_MoreErrors.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
