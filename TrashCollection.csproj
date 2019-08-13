@@ -239,6 +239,18 @@
     <Compile Include="Migrations\201908121820230_JustInCase.Designer.cs">
       <DependentUpon>201908121820230_JustInCase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908122009564_UpdatedEmployeeKey.cs" />
+    <Compile Include="Migrations\201908122009564_UpdatedEmployeeKey.Designer.cs">
+      <DependentUpon>201908122009564_UpdatedEmployeeKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908122027287_DisplayNameEmployeeModel.cs" />
+    <Compile Include="Migrations\201908122027287_DisplayNameEmployeeModel.Designer.cs">
+      <DependentUpon>201908122027287_DisplayNameEmployeeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908122057376_FixedErrors1.cs" />
+    <Compile Include="Migrations\201908122057376_FixedErrors1.Designer.cs">
+      <DependentUpon>201908122057376_FixedErrors1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -385,6 +397,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908121820230_JustInCase.resx">
       <DependentUpon>201908121820230_JustInCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908122009564_UpdatedEmployeeKey.resx">
+      <DependentUpon>201908122009564_UpdatedEmployeeKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908122027287_DisplayNameEmployeeModel.resx">
+      <DependentUpon>201908122027287_DisplayNameEmployeeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908122057376_FixedErrors1.resx">
+      <DependentUpon>201908122057376_FixedErrors1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

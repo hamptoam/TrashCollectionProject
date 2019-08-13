@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<TrashCollection.Models.Employee>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Pick-Ups";
 }
 
-<h2>Index</h2>
+<h2>Waste Pick-Ups </h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -18,34 +18,37 @@
             @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Address)
+            @Html.DisplayNameFor(model => model.employeeAddress)
         </th>
         <th>
-            @*Html.DisplayNameFor(model => model.PhoneNumber)*@
+            @Html.DisplayNameFor(model => model.PhoneNumber)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @*foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
+            @Html.DisplayFor(modelItem => item.firstName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.LastName)
+            @Html.DisplayFor(modelItem => item.lastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Address)
+            @Html.DisplayFor(modelItem => item.employeeAddress)
         </td>
         <td>
-           @* @Html.DisplayFor(modelItem => item.PhoneNumber) *@
+            @Html.DisplayFor(modelItem => item.phoneNumber) 
         </td>
+        
+
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FirstName }) |
-            @Html.ActionLink("Details", "Details", new { id=item.FirstName }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.FirstName })
+            @Html.ActionLink("Edit", "Edit", new { id=item.firstName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.firstName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.firstName })
         </td>
     </tr>
+        *@
 }
 
 </table>

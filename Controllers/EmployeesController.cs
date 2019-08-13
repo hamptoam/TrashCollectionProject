@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -76,9 +77,6 @@ namespace TrashCollection.Controllers
             return View(employee);
         }
 
-        // POST: Employees/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "FirstName,LastName,Address,PhoneNumber")] Employee employee)
@@ -117,6 +115,30 @@ namespace TrashCollection.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+       /* public ActionResult Customers()
+        {
+            String connectionString = "<The connection string here>";
+            string sql = "SELECT * FROM CUSTOMERS";
+            SqlCommand Cmd = new SqlCommand(sql, conn);
+
+            var model = new List<Customer>();
+            using(SqlConnection conn =  new SqlConnection (connectionString))
+            {
+                conn.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while(rdr.Read())
+                {
+                    var customer = new Customer();
+                    customer.FirstName = rdr["Customer's First Name"];
+                    customer.pickUpAddress = rdr["Customer Pickup Address"];
+
+                    model.Add(customer);
+
+                }
+
+            }
+        } */
 
         protected override void Dispose(bool disposing)
         {
