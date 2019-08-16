@@ -20,6 +20,12 @@
         <th>
             @Html.DisplayNameFor(model => model.pickUpAddress)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zipCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dayOfWeek)
+        </th>
     </tr>
 
 @foreach (var item in Model)
@@ -36,6 +42,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.zipCode) 
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dayOfWeek)
         </td>
 </tr>
 

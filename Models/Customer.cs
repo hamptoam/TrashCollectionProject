@@ -50,9 +50,11 @@ namespace TrashCollection.Models
         [Display(Name = "End Date (Please enter mm/dd/yy)")]
         public string endDate { get; set; }
 
-        [Display(Name = "5-digit zipcode")]
+        [Display(Name = "5-digit Zipcode")]
         public string zipCode { get; set; }
 
+        [Display(Name = "Delivery Status")]
+        public string deliveryStatus { get; set; }
 
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }

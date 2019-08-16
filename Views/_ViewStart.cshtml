@@ -1,3 +1,9 @@
-﻿@{
+﻿
+@if (User.IsInRole("Customer"))
+{
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+else if (User.IsInRole("Employee"))
+{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
 }
