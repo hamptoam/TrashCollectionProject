@@ -19,7 +19,7 @@ namespace TrashCollection.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            return View(db.Employees.ToList());
+            return View(db.Customers.ToList());
         }
 
         // GET: Employees/Details/5
@@ -116,29 +116,32 @@ namespace TrashCollection.Controllers
             return RedirectToAction("Index");
         }
 
-       /* public ActionResult Customers()
-        {
-            String connectionString = "<The connection string here>";
-            string sql = "SELECT * FROM CUSTOMERS";
-            SqlCommand Cmd = new SqlCommand(sql, conn);
 
-            var model = new List<Customer>();
-            using(SqlConnection conn =  new SqlConnection (connectionString))
-            {
-                conn.Open();
-                SqlDataReader rdr = cmd.ExecuteReader();
-                while(rdr.Read())
-                {
-                    var customer = new Customer();
-                    customer.FirstName = rdr["Customer's First Name"];
-                    customer.pickUpAddress = rdr["Customer Pickup Address"];
+        
+        //    public ActionResult Customers()
+        //    {
 
-                    model.Add(customer);
+        //    String connectionString = "<The connection string here>";
+        //    string sql = "SELECT * FROM CUSTOMERS";
+        //    SqlConnection conn = new SqlConnection(connectionString);
+        //    SqlCommand Cmd = new SqlCommand(sql, conn);
 
-                }
+        //    var model = new List<Customer>();
+        //    {
+        //        conn.Open();
+        //        SqlDataReader rdr = cmd.ExecuteReader();
+        //        while(rdr.Read())
+        //        {
+        //            var customer = new Customer();
+        //            customer.FirstName = rdr["Customer's First Name"];
+        //            customer.pickUpAddress = rdr["Customer Pickup Address"];
+        //            model.Add(customer);
 
-            }
-        } */
+        //        }
+
+        //    }
+            
+        //} 
 
         protected override void Dispose(bool disposing)
         {

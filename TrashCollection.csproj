@@ -251,6 +251,10 @@
     <Compile Include="Migrations\201908122057376_FixedErrors1.Designer.cs">
       <DependentUpon>201908122057376_FixedErrors1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908160252047_AddedZipCodeToCustomer.cs" />
+    <Compile Include="Migrations\201908160252047_AddedZipCodeToCustomer.Designer.cs">
+      <DependentUpon>201908160252047_AddedZipCodeToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -330,6 +334,7 @@
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Employees\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -406,6 +411,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908122057376_FixedErrors1.resx">
       <DependentUpon>201908122057376_FixedErrors1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908160252047_AddedZipCodeToCustomer.resx">
+      <DependentUpon>201908160252047_AddedZipCodeToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
