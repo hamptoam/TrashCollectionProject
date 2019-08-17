@@ -1,15 +1,17 @@
 ﻿
 @if (User.IsInRole("Customer"))
 {
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+
 }
+
 else if (User.IsInRole("Employee"))
 {
+
     Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+
 }
 else
 {
-    Response.Redirect("~/Views/Home/Index.cshtml");
+   Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-@*Make customer layout view and put original layout in the else*@
