@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using TrashCollection.Models;
 
 namespace TrashCollection.Controllers
@@ -17,8 +18,12 @@ namespace TrashCollection.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Employees
-        public ActionResult Index()
+        public ActionResult Index(string FirstName)
         {
+            var user = db.Employees.Where(u => u.email == FirstName).Include(m => m.ApplicationUser).Single();
+            List<Customer> pickupList = new List<Customer>();
+
+           
             return View(db.Customers.ToList());
         }
 

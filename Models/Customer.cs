@@ -56,6 +56,8 @@ namespace TrashCollection.Models
         [Display(Name = "Delivery Status")]
         public string deliveryStatus { get; set; }
 
+        List<Customer> customers { get; set; }
+
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
