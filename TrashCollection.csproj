@@ -267,6 +267,22 @@
     <Compile Include="Migrations\201908182221502_UpdatedEmployeeandCustomerModels.Designer.cs">
       <DependentUpon>201908182221502_UpdatedEmployeeandCustomerModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908182226110_Add-Migration AddedListToEmployeeModel.cs" />
+    <Compile Include="Migrations\201908182226110_Add-Migration AddedListToEmployeeModel.Designer.cs">
+      <DependentUpon>201908182226110_Add-Migration AddedListToEmployeeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908182227114_ListChangeInCustomerModel.cs" />
+    <Compile Include="Migrations\201908182227114_ListChangeInCustomerModel.Designer.cs">
+      <DependentUpon>201908182227114_ListChangeInCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908182236488_AddedPickUpDate.cs" />
+    <Compile Include="Migrations\201908182236488_AddedPickUpDate.Designer.cs">
+      <DependentUpon>201908182236488_AddedPickUpDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908182248196_ErrorFix.cs" />
+    <Compile Include="Migrations\201908182248196_ErrorFix.Designer.cs">
+      <DependentUpon>201908182248196_ErrorFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -437,6 +453,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908182221502_UpdatedEmployeeandCustomerModels.resx">
       <DependentUpon>201908182221502_UpdatedEmployeeandCustomerModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908182226110_Add-Migration AddedListToEmployeeModel.resx">
+      <DependentUpon>201908182226110_Add-Migration AddedListToEmployeeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908182227114_ListChangeInCustomerModel.resx">
+      <DependentUpon>201908182227114_ListChangeInCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908182236488_AddedPickUpDate.resx">
+      <DependentUpon>201908182236488_AddedPickUpDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908182248196_ErrorFix.resx">
+      <DependentUpon>201908182248196_ErrorFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

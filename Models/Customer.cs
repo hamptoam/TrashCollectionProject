@@ -32,8 +32,11 @@ namespace TrashCollection.Models
         [Display(Name = "Day Preference")]
         public string dayOfWeek { get; set; }
 
+        [Display(Name = "Pick-Up Date")]
+        public DateTime? pickupDate { get; set; }
+
         [Display(Name = "One-time pickup")]
-        public string oneTimePickUpDate { get; set; }
+        public DateTime? oneTimePickUpDate { get; set; }
 
         [Display(Name = "Phone Number")]
         public string phoneNumber { get; set; }
@@ -56,7 +59,7 @@ namespace TrashCollection.Models
         [Display(Name = "Delivery Status")]
         public string deliveryStatus { get; set; }
 
-        List<Customer> customers { get; set; }
+        public List<Customer> customers { get; set; }
 
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }

@@ -23,8 +23,18 @@ namespace TrashCollection.Controllers
             var user = db.Employees.Where(u => u.email == FirstName).Include(m => m.ApplicationUser).Single();
             List<Customer> pickupList = new List<Customer>();
 
-           
-            return View(db.Customers.ToList());
+            foreach (Customer customer in db.Customers)
+            {
+                if (customer.pickupDate.ToString() == DateTime.Now.ToString())
+                {
+
+                    pickupList.Add(customer);
+
+                }
+          
+            }
+
+            return View(pickupList);
         }
 
         // GET: Employees/Details/5

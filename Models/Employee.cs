@@ -11,7 +11,6 @@ namespace TrashCollection.Models
     {
         [Key]
         public int Id { get; set; }
-
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
@@ -30,12 +29,13 @@ namespace TrashCollection.Models
         [Display(Name = "Employee Phone Number")]
         public string PhoneNumber { get; set; }
 
+        public List<Customer> customers { get; set; }
+
         //did this and customer key for migration purposes, continue working on these classes 
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
+
+     
     }
-
-
-
 }
