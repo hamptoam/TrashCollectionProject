@@ -20,7 +20,7 @@ namespace TrashCollection.Controllers
         // GET: Employees
         public ActionResult Index(string FirstName)
         {
-            var user = db.Employees.Where(u => u.email == FirstName).Include(m => m.ApplicationUser).Single();
+            var user = db.Employees.Where(u => u.FirstName == FirstName).Include(m => m.ApplicationUser).FirstOrDefault();
             List<Customer> pickupList = new List<Customer>();
 
             foreach (Customer customer in db.Customers)

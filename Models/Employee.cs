@@ -29,7 +29,7 @@ namespace TrashCollection.Models
         [Display(Name = "Employee Phone Number")]
         public string PhoneNumber { get; set; }
 
-        public List<Customer> customers { get; set; }
+        public List<Customer> Customers { get; set; }
 
         //did this and customer key for migration purposes, continue working on these classes 
         [ForeignKey("ApplicationUser")]

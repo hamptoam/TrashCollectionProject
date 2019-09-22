@@ -26,6 +26,15 @@
         <th>
             @Html.DisplayNameFor(model => model.dayOfWeek)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickupDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isPickedUp)
+        </th>
+        @*<th>
+            @Html.CheckBoxFor(model  => model.isPickedUp)
+        </th>*@
     </tr>
 
 @foreach (var item in Model)
@@ -45,6 +54,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.dayOfWeek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isPickedUp)
         </td>
 </tr>
 

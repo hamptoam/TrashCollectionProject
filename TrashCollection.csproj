@@ -283,6 +283,14 @@
     <Compile Include="Migrations\201908182248196_ErrorFix.Designer.cs">
       <DependentUpon>201908182248196_ErrorFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908301541185_fixingexception.cs" />
+    <Compile Include="Migrations\201908301541185_fixingexception.Designer.cs">
+      <DependentUpon>201908301541185_fixingexception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909201748442_CustomerIsPickedUp.cs" />
+    <Compile Include="Migrations\201909201748442_CustomerIsPickedUp.Designer.cs">
+      <DependentUpon>201909201748442_CustomerIsPickedUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -369,7 +377,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Customerlt\" />
-    <Folder Include="Views\Employee\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -465,6 +472,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908182248196_ErrorFix.resx">
       <DependentUpon>201908182248196_ErrorFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908301541185_fixingexception.resx">
+      <DependentUpon>201908301541185_fixingexception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909201748442_CustomerIsPickedUp.resx">
+      <DependentUpon>201909201748442_CustomerIsPickedUp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

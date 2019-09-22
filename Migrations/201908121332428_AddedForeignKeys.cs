@@ -7,7 +7,9 @@ namespace TrashCollection.Migrations
     {
         public override void Up()
         {
-            DropPrimaryKey("dbo.Customers");
+            DropPrimaryKey("dbo.
+                
+                ");
             AddColumn("dbo.Customers", "Id", c => c.Int(nullable: false, identity: true));
             AddColumn("dbo.Customers", "ApplicationId", c => c.String(maxLength: 128));
             AddColumn("dbo.Employees", "phoneNumber", c => c.String());

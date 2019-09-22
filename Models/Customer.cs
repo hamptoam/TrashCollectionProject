@@ -56,8 +56,10 @@ namespace TrashCollection.Models
         [Display(Name = "5-digit Zipcode")]
         public string zipCode { get; set; }
 
-        [Display(Name = "Delivery Status")]
-        public string deliveryStatus { get; set; }
+
+        [Display(Name = "Trash Picked Up?")]
+        public bool isPickedUp { get; set; }
+
 
         public List<Customer> customers { get; set; }
 
