@@ -91,7 +91,7 @@ namespace TrashCollection.Controllers
        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FirstName,LastName,Email, pickUpAdress, billingAddress, balance, dayOfWeek, oneTimePickUpDate")] Customer customer)
+        public ActionResult Edit([Bind(Include = "FirstName,LastName,Email,pickUpAdress,billingAddress,balance,dayOfWeek,oneTimePickUpDate,startDate,endDate")] Customer customer)
         {
             if (ModelState.IsValid)
             {

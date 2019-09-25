@@ -162,6 +162,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Keys.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MapsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,10 +212,6 @@
     <Compile Include="Migrations\201908091435155_ImprovedCustomerModel.cs" />
     <Compile Include="Migrations\201908091435155_ImprovedCustomerModel.Designer.cs">
       <DependentUpon>201908091435155_ImprovedCustomerModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908121332428_AddedForeignKeys.cs" />
-    <Compile Include="Migrations\201908121332428_AddedForeignKeys.Designer.cs">
-      <DependentUpon>201908121332428_AddedForeignKeys.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201908121410351_FixedErrors.cs" />
     <Compile Include="Migrations\201908121410351_FixedErrors.Designer.cs">
@@ -291,8 +289,22 @@
     <Compile Include="Migrations\201909201748442_CustomerIsPickedUp.Designer.cs">
       <DependentUpon>201909201748442_CustomerIsPickedUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909241643576_UpdatedEmployeeModel.cs" />
+    <Compile Include="Migrations\201909241643576_UpdatedEmployeeModel.Designer.cs">
+      <DependentUpon>201909241643576_UpdatedEmployeeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241813053_ispickedup.cs" />
+    <Compile Include="Migrations\201909241813053_ispickedup.Designer.cs">
+      <DependentUpon>201909241813053_ispickedup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241952343_UpdatingModels.cs" />
+    <Compile Include="Migrations\201909241952343_UpdatingModels.Designer.cs">
+      <DependentUpon>201909241952343_UpdatingModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CustomerAddress.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -322,6 +334,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MapsAPI.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -377,6 +390,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Customerlt\" />
+    <Folder Include="Views\Maps\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -418,9 +432,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908091435155_ImprovedCustomerModel.resx">
       <DependentUpon>201908091435155_ImprovedCustomerModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908121332428_AddedForeignKeys.resx">
-      <DependentUpon>201908121332428_AddedForeignKeys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908121410351_FixedErrors.resx">
       <DependentUpon>201908121410351_FixedErrors.cs</DependentUpon>
@@ -478,6 +489,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909201748442_CustomerIsPickedUp.resx">
       <DependentUpon>201909201748442_CustomerIsPickedUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241643576_UpdatedEmployeeModel.resx">
+      <DependentUpon>201909241643576_UpdatedEmployeeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241813053_ispickedup.resx">
+      <DependentUpon>201909241813053_ispickedup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241952343_UpdatingModels.resx">
+      <DependentUpon>201909241952343_UpdatingModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

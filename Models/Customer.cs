@@ -10,7 +10,6 @@ namespace TrashCollection.Models
     public class Customer
     {
         [Key]
-
         [Display(Name = "Id")]
         public int Id { get; set; }
       
@@ -23,45 +22,39 @@ namespace TrashCollection.Models
         [Display(Name = "Email" )]
         public string Email { get; set; }
 
-        [Display(Name = "Pick-up Address")]
-        public string pickUpAddress { get; set; }
-
-        [Display(Name = "Billing Address")]
-        public string billingAddress { get; set; } //find out how to do "same as billing address? with checkbox
-        
         [Display(Name = "Day Preference")]
         public string dayOfWeek { get; set; }
 
         [Display(Name = "Pick-Up Date")]
+        [DataType(DataType.Date)]
         public DateTime? pickupDate { get; set; }
 
         [Display(Name = "One-time pickup")]
+        [DataType(DataType.Date)]
         public DateTime? oneTimePickUpDate { get; set; }
 
         [Display(Name = "Phone Number")]
         public string phoneNumber { get; set; }
 
         [Display(Name = "Monthly Balance")]
-        public int balance = 10;
+        public int balance = 0;
 
         [Display(Name = "Payment Due Date")]
-        public string dueDate = "9/1/19";
+        public DateTime? dueDate { get; set; }
 
-        [Display(Name = "Start Date (Please enter mm/dd/yy)")]
-        public string startDate = "9/1/19";
+        [Display(Name = "Start Date")]
+        [DataType(DataType.Date)]
+        public DateTime? startDate { get; set; }
 
-        [Display(Name = "End Date (Please enter mm/dd/yy)")]
-        public string endDate { get; set; }
+        [Display(Name = "End Date")]
+        [DataType(DataType.Date)]
+        public DateTime? endDate { get; set; }
 
         [Display(Name = "5-digit Zipcode")]
         public string zipCode { get; set; }
 
-
         [Display(Name = "Trash Picked Up?")]
         public bool isPickedUp { get; set; }
-
-
-        public List<Customer> customers { get; set; }
 
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }

@@ -9,6 +9,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Xml.Linq;
 using TrashCollection.Models;
 
 namespace TrashCollection.Controllers
@@ -20,7 +21,7 @@ namespace TrashCollection.Controllers
         // GET: Employees
         public ActionResult Index(string FirstName)
         {
-            var user = db.Employees.Where(u => u.FirstName == FirstName).Include(m => m.ApplicationUser).FirstOrDefault();
+            var user = db.Customers.Where(u => u.FirstName == FirstName).Include(m => m.ApplicationUser).FirstOrDefault();
             List<Customer> pickupList = new List<Customer>();
 
             foreach (Customer customer in db.Customers)
@@ -29,12 +30,26 @@ namespace TrashCollection.Controllers
                 {
 
                     pickupList.Add(customer);
+                    return View(pickupList);
 
                 }
-          
+               
+      
             }
 
             return View(pickupList);
+        }
+
+        public bool PickedUp(Customer customer, bool? isPickedUp)
+        {
+            if (customer.isPickedUp == true)
+            {
+                 
+                int newBalance = (customer.balance + 10);
+                customer.balance = newBalance;
+           
+            }
+            return (customer.isPickedUp == true);
         }
 
         // GET: Employees/Details/5
@@ -132,32 +147,40 @@ namespace TrashCollection.Controllers
         }
 
 
-        
-        //    public ActionResult Customers()
-        //    {
+        [HttpGet]
+        public ActionResult Maps(CustomerAddress customerAddress)
+        {
+            var user = db.Customer.CustomerAddress.Where(u => u.Id).Include(m => m.ApplicationUser).FirstOrDefault();
+            List<Customer> pickupList = new List<Customer>();
 
-        //    String connectionString = "<The connection string here>";
-        //    string sql = "SELECT * FROM CUSTOMERS";
-        //    SqlConnection conn = new SqlConnection(connectionString);
-        //    SqlCommand Cmd = new SqlCommand(sql, conn);
+            foreach (Customer customer in db.Customers)
+            {
+                if (customer.pickupDate.ToString() == DateTime.Now.ToString())
+                {
 
-        //    var model = new List<Customer>();
-        //    {
-        //        conn.Open();
-        //        SqlDataReader rdr = cmd.ExecuteReader();
-        //        while(rdr.Read())
-        //        {
-        //            var customer = new Customer();
-        //            customer.FirstName = rdr["Customer's First Name"];
-        //            customer.pickUpAddress = rdr["Customer Pickup Address"];
-        //            model.Add(customer);
+                    pickupList.Add(customer);
+                    return View(pickupList);
 
-        //        }
+                }
 
-        //    }
-            
-        //} 
+                Address address = new Address();
 
+                var url = string.Format("http://maps.google.com/maps/geo?q={0} +{1} +{2} +{3} +{4}&output=xml&oe=utf8&sensor=false&key={5}", Address1, City, ", ", State, Zip, GoogleKey);
+                var webClient = new WebClient();
+
+                WebRequest request = WebRequest.Create(url);
+                WebResponse response = request.GetResponse();
+                XDocument xdoc = XDocument.Load(response.GetResponseStream());
+
+                XElement result = xdoc.Element("GeocodeResponse").Element("result");
+                XElement locationElement = result.Element("geometry").Element("location");
+                XElement lat = locationElement.Element("lat");
+                XElement lng = locationElement.Element("lng");
+
+            }
+              return View();
+        }
+           
         protected override void Dispose(bool disposing)
         {
             if (disposing)

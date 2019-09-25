@@ -1,70 +1,33 @@
 ﻿
-@{
-    ViewBag.Title = "Map";
-}
 
-<h2>Map</h2>
-
-<script src=" http://maps.google.com/maps/api/js?sensor-true" type="text/javascript"
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Simple Map</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+        <style>
+                /* Always set the map height explicitly to define the size of the div
+            * element that contains the map. */
+                #map {
+                    height: 400px;
+                    width: 400px;
+                }
+        </style>
+        <br />
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: -34.397, lng: 150.644 },
+                    zoom: 8
+                });
+            }
         </script>
-
-<style>
-    .infoDiV {
-        height: 200px;
-        width: 300px;
-        -webkit-user-select: none;
-        background-color: white;
-
-    }
-</style>
-
-@section scripts {
-    <section class="scripts">
-  <script type="text/javascript>
-      $(document).ready(function () {
-          Initialize();
-          google.maps.visualRefresh = true;
-          var Location = new google.maps.LatLng(43.034281, -87.9130314)
-
-          var mapOptions = {
-              zoom: 14,
-              center: Location,
-              mapTypeId: google.maps.MapTypeId.G_NORMAL_MAP
-          };
-
-          var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-
-          var myLatlng = new googlemaps.LatLng(43.034281, -87.9130314);
-          var marker = new google.maps.Marker({
-              position: myLatlng,
-              map: map,
-              title: 'Pritzlaff Building'
-          });
-
-          marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
-      });
-
-      var data = [
-          { "Id": "PlaceName": "Pritzlaff Building", "GeoLong": "43.034281", "GeoLat": "-87.9130314" }
-      ];
-
-      $.each(data, function (i, item) {
-          var marker = new google.maps.Marker({
-              'position': new google.maps.Latlng(item.GeoLong, item.GeoLat),
-              'map': map,
-              'title': item.PlaceName
-
-          });
-
-          marker.setIcon('http://maps.google.com/mapfiles.ms.icons.red-dot.png')
-
-          var infowindow = new google.maps.InfoWindow({
-              content: <div class = 'infoDiv'><h2> + item.PlaceName
-      
-                  google.maps.event.addListener(marker, 'click', function () {
-                      infowindow.open(map, marker)};
-
-           });
-      });
-
-      </script></section>
+        <script src="https://maps.googleapis.com/maps/api/js?key=Keys.GoogleKey&callback=initMap"
+                async defer></script>
+    </body>
+</html>

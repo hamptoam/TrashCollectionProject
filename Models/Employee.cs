@@ -10,7 +10,9 @@ namespace TrashCollection.Models
     public class Employee
     {
         [Key]
+        [Display(Name = "Id")]
         public int Id { get; set; }
+
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
@@ -28,6 +30,8 @@ namespace TrashCollection.Models
 
         [Display(Name = "Employee Phone Number")]
         public string PhoneNumber { get; set; }
+
+        public bool isPickedUp { get; set; }
 
         public List<Customer> Customers { get; set; }
 
