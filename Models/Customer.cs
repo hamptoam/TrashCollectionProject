@@ -11,7 +11,7 @@ namespace TrashCollection.Models
     {
         [Key]
         [Display(Name = "Id")]
-        public int Id { get; set; }
+        public int CustomerId { get; set; }
       
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
@@ -23,15 +23,42 @@ namespace TrashCollection.Models
         public string Email { get; set; }
 
         [Display(Name = "Day Preference")]
-        public string dayOfWeek { get; set; }
-
+        public DayOfWeek dayOfWeek { get; set; }
+  
         [Display(Name = "Pick-Up Date")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0: yyyy-MM-dd", ApplyFormatInEditMode = true)]
         public DateTime? pickupDate { get; set; }
+
 
         [Display(Name = "One-time pickup")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0: yyyy-MM-dd", ApplyFormatInEditMode = true)]
         public DateTime? oneTimePickUpDate { get; set; }
+        public string Latitude { get; set; } 
+        public string Longitutde { get; set; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
+        public string Country { get; set; }
+
+
+
+        public enum AccurateToTypes : int
+        {
+            Unknown = 0,
+            Country = 1,
+            Reigon = 2,
+            SubRegion = 3,
+            Town = 4,
+            PostCode = 5,
+            Street = 6,
+            Intersection = 7,
+            Address = 8,
+            Premises = 9
+        }
 
         [Display(Name = "Phone Number")]
         public string phoneNumber { get; set; }

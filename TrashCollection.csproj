@@ -177,133 +177,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908071510404_Initial.cs" />
-    <Compile Include="Migrations\201908071510404_Initial.Designer.cs">
-      <DependentUpon>201908071510404_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201909251544242_TestMigration.cs" />
+    <Compile Include="Migrations\201909251544242_TestMigration.Designer.cs">
+      <DependentUpon>201909251544242_TestMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908072222481_Initial1.cs" />
-    <Compile Include="Migrations\201908072222481_Initial1.Designer.cs">
-      <DependentUpon>201908072222481_Initial1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908081231569_AccountViewModel.cs" />
-    <Compile Include="Migrations\201908081231569_AccountViewModel.Designer.cs">
-      <DependentUpon>201908081231569_AccountViewModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908081402526_AccountViewModelErrorFix.cs" />
-    <Compile Include="Migrations\201908081402526_AccountViewModelErrorFix.Designer.cs">
-      <DependentUpon>201908081402526_AccountViewModelErrorFix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908081910020_CheckingForUsers.cs" />
-    <Compile Include="Migrations\201908081910020_CheckingForUsers.Designer.cs">
-      <DependentUpon>201908081910020_CheckingForUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908081948156_AddedEmployeeandCustomerKeys.cs" />
-    <Compile Include="Migrations\201908081948156_AddedEmployeeandCustomerKeys.Designer.cs">
-      <DependentUpon>201908081948156_AddedEmployeeandCustomerKeys.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908091304576_EmployeesandCustomers.cs" />
-    <Compile Include="Migrations\201908091304576_EmployeesandCustomers.Designer.cs">
-      <DependentUpon>201908091304576_EmployeesandCustomers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908091359276_FixedRegisterViewModelError.cs" />
-    <Compile Include="Migrations\201908091359276_FixedRegisterViewModelError.Designer.cs">
-      <DependentUpon>201908091359276_FixedRegisterViewModelError.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908091435155_ImprovedCustomerModel.cs" />
-    <Compile Include="Migrations\201908091435155_ImprovedCustomerModel.Designer.cs">
-      <DependentUpon>201908091435155_ImprovedCustomerModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908121410351_FixedErrors.cs" />
-    <Compile Include="Migrations\201908121410351_FixedErrors.Designer.cs">
-      <DependentUpon>201908121410351_FixedErrors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908121429306_AddedCustomerBalance.cs" />
-    <Compile Include="Migrations\201908121429306_AddedCustomerBalance.Designer.cs">
-      <DependentUpon>201908121429306_AddedCustomerBalance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908121501162_MoreErrors.cs" />
-    <Compile Include="Migrations\201908121501162_MoreErrors.Designer.cs">
-      <DependentUpon>201908121501162_MoreErrors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908121644140_AddedDatesToCustomerModel.cs" />
-    <Compile Include="Migrations\201908121644140_AddedDatesToCustomerModel.Designer.cs">
-      <DependentUpon>201908121644140_AddedDatesToCustomerModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908121658095_AddedBalanceInformation.cs" />
-    <Compile Include="Migrations\201908121658095_AddedBalanceInformation.Designer.cs">
-      <DependentUpon>201908121658095_AddedBalanceInformation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908121820230_JustInCase.cs" />
-    <Compile Include="Migrations\201908121820230_JustInCase.Designer.cs">
-      <DependentUpon>201908121820230_JustInCase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908122009564_UpdatedEmployeeKey.cs" />
-    <Compile Include="Migrations\201908122009564_UpdatedEmployeeKey.Designer.cs">
-      <DependentUpon>201908122009564_UpdatedEmployeeKey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908122027287_DisplayNameEmployeeModel.cs" />
-    <Compile Include="Migrations\201908122027287_DisplayNameEmployeeModel.Designer.cs">
-      <DependentUpon>201908122027287_DisplayNameEmployeeModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908122057376_FixedErrors1.cs" />
-    <Compile Include="Migrations\201908122057376_FixedErrors1.Designer.cs">
-      <DependentUpon>201908122057376_FixedErrors1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908160252047_AddedZipCodeToCustomer.cs" />
-    <Compile Include="Migrations\201908160252047_AddedZipCodeToCustomer.Designer.cs">
-      <DependentUpon>201908160252047_AddedZipCodeToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908161338346_DeliveryStatus.cs" />
-    <Compile Include="Migrations\201908161338346_DeliveryStatus.Designer.cs">
-      <DependentUpon>201908161338346_DeliveryStatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908171644326_Debugging.cs" />
-    <Compile Include="Migrations\201908171644326_Debugging.Designer.cs">
-      <DependentUpon>201908171644326_Debugging.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908182221502_UpdatedEmployeeandCustomerModels.cs" />
-    <Compile Include="Migrations\201908182221502_UpdatedEmployeeandCustomerModels.Designer.cs">
-      <DependentUpon>201908182221502_UpdatedEmployeeandCustomerModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908182226110_Add-Migration AddedListToEmployeeModel.cs" />
-    <Compile Include="Migrations\201908182226110_Add-Migration AddedListToEmployeeModel.Designer.cs">
-      <DependentUpon>201908182226110_Add-Migration AddedListToEmployeeModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908182227114_ListChangeInCustomerModel.cs" />
-    <Compile Include="Migrations\201908182227114_ListChangeInCustomerModel.Designer.cs">
-      <DependentUpon>201908182227114_ListChangeInCustomerModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908182236488_AddedPickUpDate.cs" />
-    <Compile Include="Migrations\201908182236488_AddedPickUpDate.Designer.cs">
-      <DependentUpon>201908182236488_AddedPickUpDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908182248196_ErrorFix.cs" />
-    <Compile Include="Migrations\201908182248196_ErrorFix.Designer.cs">
-      <DependentUpon>201908182248196_ErrorFix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908301541185_fixingexception.cs" />
-    <Compile Include="Migrations\201908301541185_fixingexception.Designer.cs">
-      <DependentUpon>201908301541185_fixingexception.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909201748442_CustomerIsPickedUp.cs" />
-    <Compile Include="Migrations\201909201748442_CustomerIsPickedUp.Designer.cs">
-      <DependentUpon>201909201748442_CustomerIsPickedUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909241643576_UpdatedEmployeeModel.cs" />
-    <Compile Include="Migrations\201909241643576_UpdatedEmployeeModel.Designer.cs">
-      <DependentUpon>201909241643576_UpdatedEmployeeModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909241813053_ispickedup.cs" />
-    <Compile Include="Migrations\201909241813053_ispickedup.Designer.cs">
-      <DependentUpon>201909241813053_ispickedup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909241952343_UpdatingModels.cs" />
-    <Compile Include="Migrations\201909241952343_UpdatingModels.Designer.cs">
-      <DependentUpon>201909241952343_UpdatingModels.cs</DependentUpon>
+    <Compile Include="Migrations\201909251707037_daysofweek.cs" />
+    <Compile Include="Migrations\201909251707037_daysofweek.Designer.cs">
+      <DependentUpon>201909251707037_daysofweek.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\CustomerAddress.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -389,7 +272,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Customerlt\" />
     <Folder Include="Views\Maps\" />
   </ItemGroup>
   <ItemGroup>
@@ -406,98 +288,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908071510404_Initial.resx">
-      <DependentUpon>201908071510404_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909251544242_TestMigration.resx">
+      <DependentUpon>201909251544242_TestMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908072222481_Initial1.resx">
-      <DependentUpon>201908072222481_Initial1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908081231569_AccountViewModel.resx">
-      <DependentUpon>201908081231569_AccountViewModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908081402526_AccountViewModelErrorFix.resx">
-      <DependentUpon>201908081402526_AccountViewModelErrorFix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908081910020_CheckingForUsers.resx">
-      <DependentUpon>201908081910020_CheckingForUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908081948156_AddedEmployeeandCustomerKeys.resx">
-      <DependentUpon>201908081948156_AddedEmployeeandCustomerKeys.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908091304576_EmployeesandCustomers.resx">
-      <DependentUpon>201908091304576_EmployeesandCustomers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908091359276_FixedRegisterViewModelError.resx">
-      <DependentUpon>201908091359276_FixedRegisterViewModelError.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908091435155_ImprovedCustomerModel.resx">
-      <DependentUpon>201908091435155_ImprovedCustomerModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908121410351_FixedErrors.resx">
-      <DependentUpon>201908121410351_FixedErrors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908121429306_AddedCustomerBalance.resx">
-      <DependentUpon>201908121429306_AddedCustomerBalance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908121501162_MoreErrors.resx">
-      <DependentUpon>201908121501162_MoreErrors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908121644140_AddedDatesToCustomerModel.resx">
-      <DependentUpon>201908121644140_AddedDatesToCustomerModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908121658095_AddedBalanceInformation.resx">
-      <DependentUpon>201908121658095_AddedBalanceInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908121820230_JustInCase.resx">
-      <DependentUpon>201908121820230_JustInCase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908122009564_UpdatedEmployeeKey.resx">
-      <DependentUpon>201908122009564_UpdatedEmployeeKey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908122027287_DisplayNameEmployeeModel.resx">
-      <DependentUpon>201908122027287_DisplayNameEmployeeModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908122057376_FixedErrors1.resx">
-      <DependentUpon>201908122057376_FixedErrors1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908160252047_AddedZipCodeToCustomer.resx">
-      <DependentUpon>201908160252047_AddedZipCodeToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908161338346_DeliveryStatus.resx">
-      <DependentUpon>201908161338346_DeliveryStatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908171644326_Debugging.resx">
-      <DependentUpon>201908171644326_Debugging.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908182221502_UpdatedEmployeeandCustomerModels.resx">
-      <DependentUpon>201908182221502_UpdatedEmployeeandCustomerModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908182226110_Add-Migration AddedListToEmployeeModel.resx">
-      <DependentUpon>201908182226110_Add-Migration AddedListToEmployeeModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908182227114_ListChangeInCustomerModel.resx">
-      <DependentUpon>201908182227114_ListChangeInCustomerModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908182236488_AddedPickUpDate.resx">
-      <DependentUpon>201908182236488_AddedPickUpDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908182248196_ErrorFix.resx">
-      <DependentUpon>201908182248196_ErrorFix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908301541185_fixingexception.resx">
-      <DependentUpon>201908301541185_fixingexception.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909201748442_CustomerIsPickedUp.resx">
-      <DependentUpon>201909201748442_CustomerIsPickedUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909241643576_UpdatedEmployeeModel.resx">
-      <DependentUpon>201909241643576_UpdatedEmployeeModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909241813053_ispickedup.resx">
-      <DependentUpon>201909241813053_ispickedup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909241952343_UpdatingModels.resx">
-      <DependentUpon>201909241952343_UpdatingModels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909251707037_daysofweek.resx">
+      <DependentUpon>201909251707037_daysofweek.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

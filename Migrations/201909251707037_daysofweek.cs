@@ -3,16 +3,16 @@ namespace TrashCollection.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class ispickedup : DbMigration
+    public partial class daysofweek : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Employees", "isPickedUp", c => c.Boolean(nullable: false));
+            AlterColumn("dbo.Customers", "dayOfWeek", c => c.Int(nullable: false));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Employees", "isPickedUp");
+            AlterColumn("dbo.Customers", "dayOfWeek", c => c.String());
         }
     }
 }

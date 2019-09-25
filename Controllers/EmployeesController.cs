@@ -16,55 +16,83 @@ namespace TrashCollection.Controllers
 {
     public class EmployeesController : Controller
     {
+
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        List<Customer> pickupList;
+        Employee employee = new Employee();
+   
         // GET: Employees
-        public ActionResult Index(string FirstName)
-        {
-            var user = db.Customers.Where(u => u.FirstName == FirstName).Include(m => m.ApplicationUser).FirstOrDefault();
-            List<Customer> pickupList = new List<Customer>();
+        public ActionResult Index(int? CustomerId)
+        { 
+            var user = db.Customers.Where(u => u.CustomerId == CustomerId).Include(m => m.ApplicationUser).FirstOrDefault();
+            pickupList = new List<Customer>();
 
+            DayOfWeek dayOfWeek = new DayOfWeek();
+
+       
             foreach (Customer customer in db.Customers)
             {
-                if (customer.pickupDate.ToString() == DateTime.Now.ToString())
+                if (employee.Zip == customer.Zip)
                 {
-
-                    pickupList.Add(customer);
-                    return View(pickupList);
-
+                    //if (customer.pickupDate.ToString() == DateTime.Now.ToString())
+                    if (customer.dayOfWeek == DayOfWeek.Monday && user.dayOfWeek == DayOfWeek.Monday)
+                    {
+                        pickupList.Add(customer);
+                        return View(pickupList);
+                    }
+                    else if (customer.dayOfWeek == DayOfWeek.Tuesday && user.dayOfWeek == DayOfWeek.Tuesday)
+                    {
+                        pickupList.Add(customer);
+                        return View(pickupList);
+                    }
+                    else if (customer.dayOfWeek == DayOfWeek.Wednesday && user.dayOfWeek == DayOfWeek.Wednesday)
+                    {
+                        pickupList.Add(customer);
+                        return View(pickupList);
+                    }
+                    else if (customer.dayOfWeek == DayOfWeek.Thursday && user.dayOfWeek == DayOfWeek.Thursday)
+                    {
+                        pickupList.Add(customer);
+                        return View(pickupList);
+                    }
+                    else if (customer.dayOfWeek == DayOfWeek.Friday && user.dayOfWeek == DayOfWeek.Friday)
+                    {
+                        pickupList.Add(customer);
+                        return View(pickupList);
+                    }
+                    else if (customer.dayOfWeek == DayOfWeek.Saturday && user.dayOfWeek == DayOfWeek.Saturday)
+                    {
+                        pickupList.Add(customer);
+                        return View(pickupList);
+                    }
                 }
-               
-      
+                return View(pickupList);
             }
-
             return View(pickupList);
         }
 
-        public bool PickedUp(Customer customer, bool? isPickedUp)
+        public bool PickedUp(Customer customer, bool isPickedUp)
         {
-            if (customer.isPickedUp == true)
-            {
-                 
-                int newBalance = (customer.balance + 10);
-                customer.balance = newBalance;
-           
-            }
-            return (customer.isPickedUp == true);
+            int newBalance = (customer.balance + 10);
+            customer.balance = newBalance;
+
+            
+            return (isPickedUp == true);
         }
 
         // GET: Employees/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int CustomerId)
         {
-            if (id == null)
+            if (CustomerId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employee employee = db.Employees.Find(id);
-            if (employee == null)
+            Customer customer = db.Customers.Find(CustomerId);
+            if (customer == null)
             {
                 return HttpNotFound();
             }
-            return View(employee);
+            return View(customer);
         }
 
         // GET: Employees/Create
@@ -146,26 +174,26 @@ namespace TrashCollection.Controllers
             return RedirectToAction("Index");
         }
 
-
+      
         [HttpGet]
-        public ActionResult Maps(CustomerAddress customerAddress)
+
+        public ActionResult Map()
         {
-            var user = db.Customer.CustomerAddress.Where(u => u.Id).Include(m => m.ApplicationUser).FirstOrDefault();
-            List<Customer> pickupList = new List<Customer>();
+            Address address = new Address();
 
             foreach (Customer customer in db.Customers)
             {
-                if (customer.pickupDate.ToString() == DateTime.Now.ToString())
-                {
+                //if (customer.pickupDate.ToString() == DateTime.Now.ToString())
+               
 
-                    pickupList.Add(customer);
-                    return View(pickupList);
+                //pickupList.Add(customer);
+                //return View(pickuplist);
 
-                }
+                        //}
+                        //foreach (var customer in pickupList)
+                        //{
 
-                Address address = new Address();
-
-                var url = string.Format("http://maps.google.com/maps/geo?q={0} +{1} +{2} +{3} +{4}&output=xml&oe=utf8&sensor=false&key={5}", Address1, City, ", ", State, Zip, GoogleKey);
+                var url = string.Format("http://maps.google.com/maps/geo?q={0}+{1}+{2}+{3}+{4}&output=xml&oe=utf8&sensor=false&key={5}", customer.Address1, customer.City, ", ", customer.State, customer.Zip, API.Keys.GoogleKey);
                 var webClient = new WebClient();
 
                 WebRequest request = WebRequest.Create(url);
@@ -176,11 +204,11 @@ namespace TrashCollection.Controllers
                 XElement locationElement = result.Element("geometry").Element("location");
                 XElement lat = locationElement.Element("lat");
                 XElement lng = locationElement.Element("lng");
-
             }
-              return View();
+
+            return View();
         }
-           
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

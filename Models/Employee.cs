@@ -11,7 +11,7 @@ namespace TrashCollection.Models
     {
         [Key]
         [Display(Name = "Id")]
-        public int Id { get; set; }
+        public int EmployeeId { get; set; }
 
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
@@ -22,6 +22,9 @@ namespace TrashCollection.Models
         [Display(Name = "Address")]
         public string employeeAddress { get; set; }
 
+        [Display(Name = "Zip Code")]
+        public string Zip { get; set; }
+
         [Display(Name = "Email")]
         public string email { get; set; }
 
@@ -31,7 +34,7 @@ namespace TrashCollection.Models
         [Display(Name = "Employee Phone Number")]
         public string PhoneNumber { get; set; }
 
-        public bool isPickedUp { get; set; }
+        public bool isPickedUp { get; set;}
 
         public List<Customer> Customers { get; set; }
 
@@ -40,6 +43,18 @@ namespace TrashCollection.Models
         public string ApplicationId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
 
-     
+        public enum DayOfWeek
+        {
+           Sunday,
+           Monday,
+           Tuesday,
+           Wednesday,
+           Thursday,
+           Friday,
+           Saturday
+
+        }
+
+
     }
 }

@@ -22,7 +22,7 @@ namespace TrashCollection.Controllers
         }
 
         // GET: Customers/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? CustomerId)
         {
             string userId = User.Identity.GetUserId();
 
@@ -69,7 +69,7 @@ namespace TrashCollection.Controllers
         }
 
         // GET: Customers/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int CustomerId)
         {
             string userId = User.Identity.GetUserId();
 
@@ -103,13 +103,10 @@ namespace TrashCollection.Controllers
         }
 
         // GET: Customers/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int CustomerId)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Customer customer = db.Customers.Find(id);
+            
+            Customer customer = db.Customers.Find(CustomerId);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -120,9 +117,9 @@ namespace TrashCollection.Controllers
         // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int CustomerId)
         {
-            Customer customer = db.Customers.Find(id);
+            Customer customer = db.Customers.Find(CustomerId);
             db.Customers.Remove(customer);
             db.SaveChanges();
             return RedirectToAction("Index");
